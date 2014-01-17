@@ -1,0 +1,68 @@
+{% extends "project/base.html" %}
+
+{% block content %}
+  <div class="pure-u-1">
+    <div class="l-box">
+      <form action="." method="GET" class="pure-form">
+        <fieldset>
+          <input name="q" type="text" value="{% if form.q.value %}{{ form.q.value }}{% endif %}" />
+          <button type="submit" class="pure-button pure-button-primary">
+            <i class="fa fa-search"></i>
+            Search
+          </button>
+        </fieldset>
+      </form>
+      {% if query %}
+        {% if page.object_list %}
+          <table class="pure-table pure-table-bordered">
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% load verbosename %}
+              {% for result in page.object_list %}
+                <tr>
+                  <td>{{ result.object|verbosename }}</td>
+                  <td>
+                    <a href="{{ result.object.get_absolute_url }}">
+                      {{ result.object.get_summary_description|join:', ' }}
+                    </a>
+                  </td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+          {% if page.has_previous or page.has_next %}
+            <div class="pure-menu pure-menu-open pure-menu-horizontal">
+              <ul>
+                {% if page.has_previous %}
+                  <li>
+                    <a href="?page={{ page_obj.previous_page_number }}">
+                      <i class="fa fa-backward"></i>
+                      Previous
+                    </a>
+                  </li>
+                {% endif %}
+                {% if page_obj.has_next %}
+                  <li>
+                    <a href="?q={{ query }}&amp;page={{ page.next_page_number }}">
+                      Next
+                      <i class="fa fa-forward"></i>
+                    </a>
+                  </li>
+                {% endif %}
+              </ul>
+            </div>
+          {% endif %}
+        {% else %}
+          No results found
+        {% endif %}
+      {% else %}
+        {# Show some example queries to run, maybe query syntax, something else? #}
+      {% endif %}
+    </div>
+  </div>
+{% endblock content %}
