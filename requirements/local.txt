@@ -1,6 +1,8 @@
 -r base.txt
 fabric
+gitpython==0.3.1-beta2
 hgapi
 ipdb
 pytest-django
+pyyaml
 walkdir
