@@ -24,7 +24,7 @@
             <tbody>
               {% load verbosename %}
               {% for result in page.object_list %}
-                <tr>
+                <tr valign="top">
                   <td>{{ result.object|verbosename }}</td>
                   <td>
                     <a href="{{ result.object.get_absolute_url }}">
