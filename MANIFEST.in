@@ -1,0 +1,8 @@
+recursive-include search/templates *
+
+include LICENSE
+include README
+include requirements/*.txt
+include *.txt
+
+prune example/
