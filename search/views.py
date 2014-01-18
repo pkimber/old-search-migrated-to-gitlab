@@ -6,6 +6,11 @@ from haystack.views import SearchView
 
 
 class MySearchView(SearchView):
+    """Standard search view, but checking user is a member of staff.
+
+    Looks like pagination doesn't work with the 'simple_backend'.
+    https://github.com/toastdriven/django-haystack/issues/320
+    """
 
     def extra_context(self):
         context = super(MySearchView, self).extra_context()

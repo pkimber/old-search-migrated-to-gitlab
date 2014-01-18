@@ -1,0 +1,22 @@
+{% if page.has_previous or page.has_next %}
+  <div class="pure-menu pure-menu-open pure-menu-horizontal">
+    <ul>
+      {% if page.has_previous %}
+        <li>
+          <a href="?q={{ query }}&amp;page={{ page.previous_page_number }}">
+            <i class="fa fa-backward"></i>
+            Previous
+          </a>
+        </li>
+      {% endif %}
+      {% if page.has_next %}
+        <li>
+          <a href="?q={{ query }}&amp;page={{ page.next_page_number }}">
+            Next
+            <i class="fa fa-forward"></i>
+          </a>
+        </li>
+      {% endif %}
+    </ul>
+  </div>
+{% endif %}

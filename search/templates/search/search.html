@@ -14,6 +14,7 @@
       </form>
       {% if query %}
         {% if page.object_list %}
+          {% include 'search/_paginate.html' %}
           <table class="pure-table pure-table-bordered">
             <thead>
               <tr>
@@ -35,28 +36,7 @@
               {% endfor %}
             </tbody>
           </table>
-          {% if page.has_previous or page.has_next %}
-            <div class="pure-menu pure-menu-open pure-menu-horizontal">
-              <ul>
-                {% if page.has_previous %}
-                  <li>
-                    <a href="?page={{ page_obj.previous_page_number }}">
-                      <i class="fa fa-backward"></i>
-                      Previous
-                    </a>
-                  </li>
-                {% endif %}
-                {% if page_obj.has_next %}
-                  <li>
-                    <a href="?q={{ query }}&amp;page={{ page.next_page_number }}">
-                      Next
-                      <i class="fa fa-forward"></i>
-                    </a>
-                  </li>
-                {% endif %}
-              </ul>
-            </div>
-          {% endif %}
+          {% include 'search/_paginate.html' %}
         {% else %}
           No results found
         {% endif %}
