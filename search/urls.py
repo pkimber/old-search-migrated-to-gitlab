@@ -4,7 +4,8 @@ from django.conf.urls import url
 from haystack.forms import SearchForm
 from haystack.views import search_view_factory
 
-from search.views import MySearchView
+from .views import MySearchView
+
 
 urlpatterns = patterns(
     '',

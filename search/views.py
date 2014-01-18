@@ -4,6 +4,8 @@ from django.contrib.auth.views import redirect_to_login
 
 from haystack.views import SearchView
 
+from base.view_utils import get_path
+
 
 class MySearchView(SearchView):
     """Standard search view, but checking user is a member of staff.
@@ -15,6 +17,7 @@ class MySearchView(SearchView):
     def extra_context(self):
         context = super(MySearchView, self).extra_context()
         context.update(dict(
+            path=get_path(self.request.path),
         ))
         return context
 
