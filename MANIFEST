@@ -6,6 +6,7 @@ requirements/local.txt
 search/__init__.py
 search/urls.py
 search/views.py
+search/templates/search/_paginate.html
 search/templates/search/search.html
 search/tests/__init__.py
 search/tests/helper.py
