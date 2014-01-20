@@ -13,7 +13,10 @@ class Cake(models.Model):
         return unicode('{}'.format(self.name))
 
     def get_summary_description(self):
-        return self.name, self.description
+        return filter(None, (
+            self.name,
+            self.description,
+        ))
 
 
 class Coffee(models.Model):
@@ -28,4 +31,7 @@ class Coffee(models.Model):
         return unicode('{}'.format(self.name))
 
     def get_summary_description(self):
-        return self.name, self.rating
+        return filter(None, (
+            self.name,
+            self.rating,
+        ))
