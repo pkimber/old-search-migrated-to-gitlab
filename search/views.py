@@ -1,3 +1,6 @@
+# -*- encoding: utf-8 -*-
+
+from __future__ import unicode_literals
 from django.conf import settings
 from django.core.exceptions import PermissionDenied
 from django.contrib.auth.views import redirect_to_login

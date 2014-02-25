@@ -67,4 +67,3 @@ Release
 =======
 
 https://github.com/pkimber/docs
-

@@ -1,3 +1,6 @@
+# -*- encoding: utf-8 -*-
+
+from __future__ import unicode_literals
 from django.db import models
 
 
@@ -9,7 +12,7 @@ class Cake(models.Model):
         verbose_name = 'Cake'
         verbose_name_plural = 'Cakes'
 
-    def __unicode__(self):
+    def __str__(self):
         return unicode('{}'.format(self.name))
 
     def get_summary_description(self):
@@ -27,7 +30,7 @@ class Coffee(models.Model):
         verbose_name = 'Coffee'
         verbose_name_plural = 'Coffees'
 
-    def __unicode__(self):
+    def __str__(self):
         return unicode('{}'.format(self.name))
 
     def get_summary_description(self):
