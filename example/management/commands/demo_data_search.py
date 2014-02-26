@@ -14,7 +14,7 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         # setup the 'search' demo data
         self._demo_data_search()
-        print "Created 'search' demo data..."
+        print("Created 'search' demo data...")
 
     def _demo_data_search(self):
         Cake(
