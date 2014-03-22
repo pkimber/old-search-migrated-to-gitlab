@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
-
 from __future__ import unicode_literals
+
 def check_search_methods(model_instance):
     """
     Call the standard methods used by the search template.  An exception will
