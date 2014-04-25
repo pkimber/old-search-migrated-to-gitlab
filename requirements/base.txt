@@ -4,4 +4,5 @@ django-reversion==1.8.0
 Django==1.6.3
 easy-thumbnails
 pillow
+pytz==2014.2
 South==0.8.4
