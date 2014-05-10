@@ -2,7 +2,6 @@
 -e .
 -e ../base
 -e ../login
-fabric
 gitpython
 hgapi
 ipdb
