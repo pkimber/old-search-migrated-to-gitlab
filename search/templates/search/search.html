@@ -1,48 +1,50 @@
 {% extends "project/base.html" %}
 
 {% block content %}
-  <div class="pure-u-1">
-    <div class="l-box">
-      <form action="." method="GET" class="pure-form">
-        <fieldset>
-          <input name="q" type="text" value="{% if form.q.value %}{{ form.q.value }}{% endif %}" />
-          <button type="submit" class="pure-button pure-button-primary">
-            <i class="fa fa-search"></i>
-            Search
-          </button>
-        </fieldset>
-      </form>
-      {% if query %}
-        {% if page.object_list %}
-          {% include 'search/_paginate.html' %}
-          <table class="pure-table pure-table-bordered">
-            <thead>
-              <tr>
-                <th>Item</th>
-                <th>Description</th>
-              </tr>
-            </thead>
-            <tbody>
-              {% load verbosename %}
-              {% for result in page.object_list %}
-                <tr valign="top">
-                  <td>{{ result.object|verbosename }}</td>
-                  <td>
-                    <a href="{{ result.object.get_absolute_url }}">
-                      {{ result.object.get_summary_description|join:', ' }}
-                    </a>
-                  </td>
+  <div class="pure-g">
+    <div class="pure-u-1">
+      <div class="l-box">
+        <form action="." method="GET" class="pure-form">
+          <fieldset>
+            <input name="q" type="text" value="{% if form.q.value %}{{ form.q.value }}{% endif %}" />
+            <button type="submit" class="pure-button pure-button-primary">
+              <i class="fa fa-search"></i>
+              Search
+            </button>
+          </fieldset>
+        </form>
+        {% if query %}
+          {% if page.object_list %}
+            {% include 'search/_paginate.html' %}
+            <table class="pure-table pure-table-bordered">
+              <thead>
+                <tr>
+                  <th>Item</th>
+                  <th>Description</th>
                 </tr>
-              {% endfor %}
-            </tbody>
-          </table>
-          {% include 'search/_paginate.html' %}
+              </thead>
+              <tbody>
+                {% load verbosename %}
+                {% for result in page.object_list %}
+                  <tr valign="top">
+                    <td>{{ result.object|verbosename }}</td>
+                    <td>
+                      <a href="{{ result.object.get_absolute_url }}">
+                        {{ result.object.get_summary_description|join:', ' }}
+                      </a>
+                    </td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+            {% include 'search/_paginate.html' %}
+          {% else %}
+            No results found
+          {% endif %}
         {% else %}
-          No results found
+          {# Show some example queries to run, maybe query syntax, something else? #}
         {% endif %}
-      {% else %}
-        {# Show some example queries to run, maybe query syntax, something else? #}
-      {% endif %}
+      </div>
     </div>
   </div>
 {% endblock content %}
