@@ -27,7 +27,7 @@ setup(
             'templates/search/*.*',
         ],
     },
-    version='0.0.11',
+    version='0.1.01',
     description='Search',
     author='Patrick Kimber',
     author_email='code@pkimber.net',
