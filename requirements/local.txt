@@ -2,6 +2,7 @@
 -e .
 -e ../base
 -e ../login
+devpi-client
 factory-boy
 gitpython
 hgapi
