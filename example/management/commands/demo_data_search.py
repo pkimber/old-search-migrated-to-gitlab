@@ -1,7 +1,6 @@
 # -*- encoding: utf-8 -*-
-
 from __future__ import unicode_literals
-from django.core import management
+
 from django.core.management.base import BaseCommand
 
 from example.models import Cake, Coffee
@@ -18,14 +17,19 @@ class Command(BaseCommand):
 
     def _demo_data_search(self):
         Cake(
-            name='Lemon Cake', description='Probably... one of the best'
+            name='Lemon Cake',
+            description='Probably... one of the best',
         ).save()
         Cake(
-            name='Carrot Cake', description='My personal favourite'
+            name='Carrot Cake',
+            description='My personal favourite',
+            deleted=True,
         ).save()
         Cake(
-            name='Coffee Cake', description='Wonderful with walnuts'
+            name='Coffee Cake',
+            description='Wonderful with walnuts',
         ).save()
         Coffee(
-            name='Capuccino coffee', rating=10
+            name='Capuccino coffee',
+            rating=10,
         ).save()

@@ -11,6 +11,9 @@
               <i class="fa fa-search"></i>
               Search
             </button>
+            <label for="deleted" class="pure-checkbox">
+              <input name="deleted" id="deleted" type="checkbox"> Include deleted records
+            </label>
           </fieldset>
         </form>
         {% if query %}
@@ -29,9 +32,11 @@
                   <tr valign="top">
                     <td>{{ result.object|verbosename }}</td>
                     <td>
+                      {% if result.object.deleted %}<strike>{% endif %}
                       <a href="{{ result.object.get_absolute_url }}">
                         {{ result.object.get_summary_description|join:', ' }}
                       </a>
+                      {% if result.object.deleted %}</strike>{% endif %}
                     </td>
                   </tr>
                 {% endfor %}
