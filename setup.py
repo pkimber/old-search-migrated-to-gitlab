@@ -19,7 +19,7 @@ def get_readme():
 
 
 setup(
-    name='pkimber-search',
+    name='kb-search',
     packages=['search', 'search.tests'],
     package_data={
         'search': [
@@ -27,7 +27,7 @@ setup(
             'templates/search/*.*',
         ],
     },
-    version='0.1.03',
+    version='0.1.04',
     description='Search',
     author='Patrick Kimber',
     author_email='code@pkimber.net',
