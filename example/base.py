@@ -1,11 +1,12 @@
 # -*- encoding: utf-8 -*-
-
 from __future__ import unicode_literals
+
 """ Django settings """
 from django.core.urlresolvers import reverse_lazy
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
+TESTING = False
 THUMBNAIL_DEBUG = DEBUG
 
 SESSION_COOKIE_SECURE = False
@@ -181,4 +182,3 @@ LOGIN_REDIRECT_URL = reverse_lazy('holding.page.design.home')
 # https://github.com/johnsensible/django-sendfile
 SENDFILE_BACKEND = 'sendfile.backends.development'
 SENDFILE_ROOT = 'media-private'
-

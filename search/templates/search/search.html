@@ -12,7 +12,8 @@
               Search
             </button>
             <label for="deleted" class="pure-checkbox">
-              <input name="deleted" id="deleted" type="checkbox"> Include deleted records
+              <input name="deleted" id="deleted" type="checkbox" {% if form.deleted.value %}checked{% endif %}>
+              Include deleted records
             </label>
           </fieldset>
         </form>

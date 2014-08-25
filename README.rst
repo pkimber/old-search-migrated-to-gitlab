@@ -42,6 +42,3 @@ Release
 =======
 
 https://www.pkimber.net/open/fabric-release.html
-https://www.pkimber.net/open/fabric-release.html
-https://www.pkimber.net/open/fabric-release.html
-https://www.pkimber.net/open/fabric-release.html

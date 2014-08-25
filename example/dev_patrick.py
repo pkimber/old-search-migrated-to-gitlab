@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
-
 from __future__ import unicode_literals
+
 from .base import *
 
 DATABASES = {
@@ -14,9 +14,19 @@ DATABASES = {
     }
 }
 
-# install the simple engine (dev only)
+# simple engine (dev only)
 HAYSTACK_CONNECTIONS = {
     'default': {
         'ENGINE': 'haystack.backends.simple_backend.SimpleEngine',
     },
 }
+
+#HAYSTACK_CONNECTIONS = {
+#    'default': {
+#        'BATCH_SIZE': 100,
+#        'ENGINE': 'haystack.backends.elasticsearch_backend.ElasticsearchSearchEngine',
+#        'INDEX_NAME': 'example_search',
+#        'TIMEOUT': 60 * 5,
+#        'URL': 'http://127.0.0.1:9200/',
+#    },
+#}
