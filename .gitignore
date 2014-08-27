@@ -37,6 +37,7 @@ nosetests.xml
 
 # dev
 .cache
+MANIFEST
 media
 media-private
 temp.db
