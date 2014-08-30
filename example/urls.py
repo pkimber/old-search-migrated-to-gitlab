@@ -32,7 +32,7 @@ urlpatterns = patterns(
         ),
     url(r'^home/user/$',
         view=RedirectView.as_view(url=reverse_lazy('project.home')),
-        name='project.home.user'
+        name='project.dash'
         ),
 )
 
@@ -41,4 +41,3 @@ urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 # https://docs.djangoproject.com/en/1.5/howto/static-files/#serving-files-uploaded-by-a-user
 
 urlpatterns += staticfiles_urlpatterns()
-
