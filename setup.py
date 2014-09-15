@@ -27,7 +27,7 @@ setup(
             'templates/search/*.*',
         ],
     },
-    version='0.1.07',
+    version='0.1.08',
     description='Search',
     author='Malcolm Dinsmore',
     author_email='m.dinsmore@talk21.com',
