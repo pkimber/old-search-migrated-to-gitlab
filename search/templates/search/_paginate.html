@@ -1,17 +1,17 @@
 {% if page.has_previous or page.has_next %}
-  <div class="pure-menu pure-menu-open pure-menu-horizontal">
-    <ul>
+  <div class="pure-menu pure-menu-horizontal">
+    <ul class="pure-menu-list">
       {% if page.has_previous %}
-        <li>
-          <a href="?q={{ query }}&amp;page={{ page.previous_page_number }}">
+        <li class="pure-menu-item">
+          <a href="?q={{ query }}&amp;page={{ page.previous_page_number }}" class="pure-menu-link">
             <i class="fa fa-backward"></i>
             Previous
           </a>
         </li>
       {% endif %}
       {% if page.has_next %}
-        <li>
-          <a href="?q={{ query }}&amp;page={{ page.next_page_number }}">
+        <li class="pure-menu-item">
+          <a href="?q={{ query }}&amp;page={{ page.next_page_number }}" class="pure-menu-link">
             Next
             <i class="fa fa-forward"></i>
           </a>
