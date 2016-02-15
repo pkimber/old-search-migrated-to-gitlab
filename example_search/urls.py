@@ -1,6 +1,4 @@
 # -*- encoding: utf-8 -*-
-
-from __future__ import unicode_literals
 from django.conf import settings
 from django.conf.urls import patterns, include, url
 from django.conf.urls.static import static
@@ -9,7 +7,10 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.core.urlresolvers import reverse_lazy
 from django.views.generic import RedirectView
 
-from .views import HomeView
+from .views import (
+    HomeView,
+    SettingsView,
+)
 
 
 admin.autodiscover()
@@ -20,6 +21,10 @@ urlpatterns = patterns(
     url(regex=r'^$',
         view=HomeView.as_view(),
         name='project.home'
+        ),
+    url(regex=r'^settings/$',
+        view=SettingsView.as_view(),
+        name='project.settings'
         ),
     url(regex=r'^',
         view=include('login.urls')

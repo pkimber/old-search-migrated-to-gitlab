@@ -11,10 +11,9 @@ Virtual Environment
 
 ::
 
-  pyvenv-3.4 --without-pip venv-search
+  virtualenv --python=python3.4 venv-search
   source venv-search/bin/activate
-  wget https://raw.githubusercontent.com/pypa/pip/master/contrib/get-pip.py
-  python get-pip.py
+  pip install --upgrade pip
 
   pip install -r requirements/local.txt
 
@@ -41,4 +40,4 @@ Usage
 Release
 =======
 
-https://www.pkimber.net/open/fabric-release.html
+https://www.kbsoftware.co.uk/docs/
