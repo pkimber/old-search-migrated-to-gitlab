@@ -11,9 +11,8 @@ Virtual Environment
 
 ::
 
-  virtualenv --python=python3.4 venv-search
+  virtualenv --python=python3 venv-search
   source venv-search/bin/activate
-  pip install --upgrade pip
 
   pip install -r requirements/local.txt
 

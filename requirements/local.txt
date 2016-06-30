@@ -3,13 +3,7 @@
 -e ../base
 -e ../login
 -e ../mail
-devpi-client
 factory-boy
-gitpython
-hgapi
-ipdb
 pytest-django
 pytest-flakes
 pytest-pep8
-pyyaml
-walkdir

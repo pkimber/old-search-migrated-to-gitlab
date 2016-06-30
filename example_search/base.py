@@ -133,6 +133,7 @@ LOCAL_APPS = (
     'base',
     'example_search',
     'login',
+    'mail',
     'search',
 )
 
