@@ -16,9 +16,8 @@ class MySearchForm(SearchForm):
     deleted = forms.BooleanField(required=False)
 
     def search(self):
-
         # First, store the SearchQuerySet received from other processing.
-        sqs = super(MySearchForm, self).search()
+        sqs = super().search()
         if not self.is_valid():
             return self.no_query_found()
         # Check to see if a deleted was ticked.
