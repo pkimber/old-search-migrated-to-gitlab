@@ -27,10 +27,10 @@ setup(
             'templates/search/*.*',
         ],
     },
-    version='0.1.19',
+    version='0.1.20',
     description='Search',
     author='Malcolm Dinsmore',
-    author_email='m.dinsmore@talk21.com',
+    author_email='zebyea@gmail.com',
     url='git@github.com:pkimber/search.git',
     classifiers=[
         'Development Status :: 1 - Planning',
