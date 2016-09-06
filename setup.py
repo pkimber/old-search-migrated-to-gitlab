@@ -27,7 +27,7 @@ setup(
             'templates/search/*.*',
         ],
     },
-    version='0.1.22',
+    version='0.1.23',
     description='Search',
     author='Malcolm Dinsmore',
     author_email='zebyea@gmail.com',
